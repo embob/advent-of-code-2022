@@ -9,6 +9,10 @@ const readInputAsArray = (path: fs.PathOrFileDescriptor) => {
   return readInput(path).split("\n");
 }
 
+const readInputAsArraySplitByBlankLines = (path: fs.PathOrFileDescriptor) => {
+  return readInput(path).split('\n\n');
+}
+
 const readInputAsArrayOfArrays = (path: fs.PathOrFileDescriptor) => {
   return readInput(path).split("\n\n").map(item => item.split("\n"));
 }
@@ -23,4 +27,5 @@ export {
   readInputAsArray,
   readInputAsNumberArray,
   readInputAsArrayOfArrays,
+  readInputAsArraySplitByBlankLines
 };
